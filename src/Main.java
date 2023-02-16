@@ -14,7 +14,7 @@ public class Main {
         while (new String(guessedChars).contains("_")) {
             String guessedWord = input.nextLine().toLowerCase();
             if (guessedWord.length() > 1) {
-                System.out.println("Only one letter you fucking dumbass");
+                System.out.println("Only one letter you dumbass");
                 continue;
             } else if (!Character.isLetter(guessedWord.charAt(0))) {
                 System.out.println("Write only letters not numbers");
