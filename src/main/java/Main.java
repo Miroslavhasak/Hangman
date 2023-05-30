@@ -33,6 +33,7 @@ public class Main {
             System.out.println("Only one letter you fucking dumbass");
         }
 
+        /*                  TEST                                        */
 
         /*-----------GUESSING THE LETTERS ONE BY ONE-----------------*/
 
