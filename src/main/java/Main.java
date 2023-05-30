@@ -57,6 +57,7 @@ public class Main {
             System.out.println(" / \\   |");
             System.out.println(" ______|");
             System.out.println("|______|");
+            System.out.println("hahahah");
             guessedWord = input.nextLine();
         }
         System.out.println("You guessed the right word.\nCongrats!");
