@@ -16,7 +16,7 @@ public class Main {
             System.out.print("_ ");
         }
         System.out.println("\n");
-
+        /*neviem*/
         /*-----------ONLY ONE LETTER INPUT--------------------*/
 
         String guessedWord = input.nextLine();
