@@ -5,64 +5,77 @@ public class Main {
     public static void main(String[] args) {
         /*-------------------INPUT THE GUESSING WORD------------------*/
 
+        int attempts = 5;
         Scanner input = new Scanner(System.in);
         System.out.println("Enter word to guess");
-        String word = input.nextLine().toLowerCase();		//word = miro
+        String secretWord = input.nextLine().toLowerCase();
+        String guessedWord = "_".repeat(secretWord.length());
 
-        /*-----------GUESSING THE LETTER----------------------*/
+        /*-----------GUESSING THE LETTER----------------------*/        //todo osetrit aby tam islo davat aj prazdne miesta
+        System.out.println("Ok lets start. ");
+        while (attempts > 0) {
+            System.out.println("Actual word: " + guessedWord);
+            System.out.println("Guess the letter ");
 
-        System.out.println("Ok lets start.\nGuess the letter ");
-        for (int i = 0; i<word.length();i++) {		//za kazde pismeno co je vo "word" tak vypise _
-            System.out.print("_ ");
-        }
-        System.out.println("\n");
-        /*neviem*/
+            String guessedLetter = input.nextLine();
+            int characterCount = guessedLetter.length();
+            boolean allLetters = guessedLetter.chars().allMatch(Character::isLetter);
+
         /*-----------ONLY ONE LETTER INPUT--------------------*/
 
-        String guessedLetter = input.nextLine();
-        int characterCount = guessedLetter.length();
-        boolean allLetters = guessedLetter.chars().allMatch(Character::isLetter);
+            if (characterCount != 1) {
+                System.out.println("Only one letter you fucking dumbass");
+                continue;
+            }
 
-        if (!allLetters) {
-            System.out.println("Write only letters not numbers");
-        }
+            if (!allLetters) {
+                System.out.println("Write only letters not numbers");
+                continue;
+            }
+            char guess = guessedLetter.charAt(0);
 
-        if (characterCount == 1) {
-            System.out.println("right");
-        } else {
-            System.out.println("Only one letter you fucking dumbass");
-        }
 
-        /*-----------GUESSING THE LETTERS ONE BY ONE-----------------*/
+            for (int i = 0; i < secretWord.length(); i++) {
+                if (secretWord.charAt(i) == guess) {
+                    guessedWord = guessedWord.substring(0, i) + guess + guessedWord.substring(i + 1);
+                }
+            }
 
-        char[] letter = word.toCharArray();
+            /*-----------GUESSING THE LETTERS ONE BY ONE-----------------*/
 
-        for (int i = 0; i < word.length();i++) {
-            char c = word.charAt(i);
-        }
-		/*if (word.contains("")) {
-													//ak input word obsahuje hociake pismeno z toho co hadany napise tak sa to nahradi za _
-		}*/
+            if (secretWord.contains(guessedLetter)) {
 
-        /*-------------------HANGMAN GRAPHICS--------------*/
+                /*-------------------HANGMAN GRAPHICS--------------*/
+                //while (letter.equals(guessedLetter))
 
-        while (!word.equals(guessedLetter)) {             //todo chyba tu je ze ak sa nerovna slovo tak vykresli a ja chcem iba pismeno
+        /*while (guessedWord != secretWord.length()) {
             System.out.println("Try again!");
             System.out.println(" -------");
             System.out.println("  |    |");
-            System.out.println("  O    |");
+            System.out.println("  o    |");
             System.out.println(" /|\\   |");
             System.out.println(" / \\   |");
             System.out.println(" ______|");
             System.out.println("|______|");
-            System.out.println("hahahah");
-            System.out.println("hahahah");
 
-            guessedLetter = input.nextLine();
+        }*/
+                System.out.println("You guessed the right letter.\nCongrats!");
+            }
+            else {
+                System.out.println("Noob");
+                attempts--;
+                System.out.println("You have "+attempts+" attempts");
+            }
+
+            if (guessedWord.equals(secretWord)) {
+                System.out.println("You won you lucky bastard.");
+                break;
+            }
+
         }
-        System.out.println("You guessed the right word.\nCongrats!");
-        input.close();
-
+        if (attempts == 0) {
+            System.out.println("You lost haha the word was so easy take a look it is " +secretWord);
+            input.close();
+        }
     }
 }
-//todo ak zadam spravne pismeno tak to nezobere
