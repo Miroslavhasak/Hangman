@@ -19,21 +19,19 @@ public class Main {
         /*neviem*/
         /*-----------ONLY ONE LETTER INPUT--------------------*/
 
-        String guessedWord = input.nextLine();
-
-        boolean allLetters = guessedWord.chars().allMatch(Character::isLetter);
+        String guessedLetter = input.nextLine();
+        int characterCount = guessedLetter.length();
+        boolean allLetters = guessedLetter.chars().allMatch(Character::isLetter);
 
         if (!allLetters) {
             System.out.println("Write only letters not numbers");
         }
 
-        if (word.length() <= 0) {
+        if (characterCount == 1) {
             System.out.println("right");
         } else {
             System.out.println("Only one letter you fucking dumbass");
         }
-
-        /*                  TEST                                        */
 
         /*-----------GUESSING THE LETTERS ONE BY ONE-----------------*/
 
@@ -48,7 +46,7 @@ public class Main {
 
         /*-------------------HANGMAN GRAPHICS--------------*/
 
-        while (!word.equals(guessedWord)) {
+        while (!word.equals(guessedLetter)) {             //todo chyba tu je ze ak sa nerovna slovo tak vykresli a ja chcem iba pismeno
             System.out.println("Try again!");
             System.out.println(" -------");
             System.out.println("  |    |");
@@ -60,10 +58,11 @@ public class Main {
             System.out.println("hahahah");
             System.out.println("hahahah");
 
-            guessedWord = input.nextLine();
+            guessedLetter = input.nextLine();
         }
         System.out.println("You guessed the right word.\nCongrats!");
         input.close();
 
     }
 }
+//todo ak zadam spravne pismeno tak to nezobere
