@@ -21,7 +21,6 @@ public class Main {
         }
         String guessedWord = guessedWordBuilder.toString();
 
-
         /*-----------GUESSING THE LETTER----------------------*/
 
         System.out.println("Ok lets start. ");
