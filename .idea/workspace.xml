@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25de3172-e430-45a0-9e0a-61e1ad70ce0d" name="Changes" comment="3.commit need to fix graphics (if i write right letter it counts as wrong letter)">
-      <change afterPath="$PROJECT_DIR$/src/main/java/FakeMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/GuessTheWord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/MyFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Rectangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Shape.java" afterDir="false" />
+    <list default="true" id="25de3172-e430-45a0-9e0a-61e1ad70ce0d" name="Changes" comment="4.commit guess the word is working perfectly need hotfix bcs of whitespaces">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
@@ -63,7 +59,9 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/miroh/Desktop/Hangman",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -83,6 +81,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Idk" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Idk" />
+      <module name="Hangman" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Hangman" />
@@ -93,6 +98,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Idk" />
         <item itemvalue="Application.GuessTheWord" />
       </list>
     </recent_temporary>
@@ -110,7 +116,9 @@
       <workItem from="1685520838259" duration="1536000" />
       <workItem from="1685523318215" duration="32000" />
       <workItem from="1685523358551" duration="255000" />
-      <workItem from="1685523621958" duration="20189000" />
+      <workItem from="1685523621958" duration="20462000" />
+      <workItem from="1685619267057" duration="82000" />
+      <workItem from="1685634883448" duration="4047000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1685452087066</created>
@@ -175,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685534124112</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="4.commit guess the word is working perfectly need hotfix bcs of whitespaces">
+      <created>1685569347463</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1685569347463</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,7 +211,8 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="second commit" />
     <MESSAGE value="3.commit need to fix graphics (if i write right letter it counts as wrong letter)" />
-    <option name="LAST_COMMIT_MESSAGE" value="3.commit need to fix graphics (if i write right letter it counts as wrong letter)" />
+    <MESSAGE value="4.commit guess the word is working perfectly need hotfix bcs of whitespaces" />
+    <option name="LAST_COMMIT_MESSAGE" value="4.commit guess the word is working perfectly need hotfix bcs of whitespaces" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
