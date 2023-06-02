@@ -1,11 +1,10 @@
 import java.util.Scanner;
 
-public class Main {
+public class Main {             //todo principy oop
 
     public static void main(String[] args) {
         /*-------------------INPUT THE GUESSING WORD------------------*/
 
-        int attempts = 10;
         Scanner input = new Scanner(System.in);
         System.out.println("Enter word to guess");
         String secretWord = input.nextLine().toLowerCase();
@@ -24,7 +23,7 @@ public class Main {
         /*-----------GUESSING THE LETTER----------------------*/
 
         System.out.println("Ok lets start. ");
-        while (attempts > 0) {
+        while (Graphics.attempts > 0) {
             System.out.println("Actual word: " + guessedWord);
             System.out.println("Guess the letter. ");
             String guessedLetter = input.nextLine();
@@ -57,95 +56,12 @@ public class Main {
             if (secretWord.contains(guessedLetter)) {
                 System.out.println("You guessed the right letter.\nCongrats!");
             } else {
-                attempts--;
+                Graphics.attempts--;
             }
 
-            /*-------------------HANGMAN GRAPHICS--------------*/
+            Graphics graphics = new Graphics();
+            graphics.drawHangman();
 
-            if (attempts == 9) {
-                System.out.println("Noob");
-                System.out.println("Try again!");
-                System.out.println(" ");
-                System.out.println(" ");
-                System.out.println(" ");
-                System.out.println(" ");
-                System.out.println(" ");
-                System.out.println(" ______");
-                System.out.println("|______|");
-                System.out.println("You have " + attempts + " attempts");
-            } else if (attempts == 8) {
-                System.out.println("Try again!");
-                System.out.println(" ");
-                System.out.println("       |");
-                System.out.println("       |");
-                System.out.println("       |");
-                System.out.println("       |");
-                System.out.println(" ______|");
-                System.out.println("|______|");
-            } else if (attempts == 7) {
-                System.out.println("Try again!");
-                System.out.println(" -------");
-                System.out.println("       |");
-                System.out.println("       |");
-                System.out.println("       |");
-                System.out.println("       |");
-                System.out.println(" ______|");
-                System.out.println("|______|");
-            } else if (attempts == 6) {
-                System.out.println("Try again!");
-                System.out.println(" -------");
-                System.out.println("  |    |");
-                System.out.println("       |");
-                System.out.println("       |");
-                System.out.println("       |");
-                System.out.println(" ______|");
-                System.out.println("|______|");
-            } else if (attempts == 5) {
-                System.out.println("Try again!");
-                System.out.println(" -------");
-                System.out.println("  |    |");
-                System.out.println("  o    |");
-                System.out.println("       |");
-                System.out.println("       |");
-                System.out.println(" ______|");
-                System.out.println("|______|");
-            } else if (attempts == 4) {
-                System.out.println("Try again!");
-                System.out.println(" -------");
-                System.out.println("  |    |");
-                System.out.println("  o    |");
-                System.out.println("  |    |");
-                System.out.println("       |");
-                System.out.println(" ______|");
-                System.out.println("|______|");
-            } else if (attempts == 3) {
-                System.out.println("Try again!");
-                System.out.println(" -------");
-                System.out.println("  |    |");
-                System.out.println("  o    |");
-                System.out.println("  |    |");
-                System.out.println(" /     |");
-                System.out.println(" ______|");
-                System.out.println("|______|");
-            } else if (attempts == 2) {
-                System.out.println("Try again!");
-                System.out.println(" -------");
-                System.out.println("  |    |");
-                System.out.println("  o    |");
-                System.out.println("  |    |");
-                System.out.println(" / \\   |");
-                System.out.println(" ______|");
-                System.out.println("|______|");
-            } else if (attempts == 1) {
-                System.out.println("Try again!");
-                System.out.println(" -------");
-                System.out.println("  |    |");
-                System.out.println("  o    |");
-                System.out.println(" /|    |");
-                System.out.println(" / \\   |");
-                System.out.println(" ______|");
-                System.out.println("|______|");
-            }
 
             if (guessedWord.equals(secretWord)) {
                 System.out.println("You won you lucker.");
@@ -153,7 +69,7 @@ public class Main {
                 break;
             }
         }
-        if (attempts == 0) {
+        if (Graphics.attempts == 0) {
             System.out.println("You lost haha the word was so easy take a look it is " + secretWord);
             System.out.println(" -------");
             System.out.println("  |    |");

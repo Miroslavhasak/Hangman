@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25de3172-e430-45a0-9e0a-61e1ad70ce0d" name="Changes" comment="5.commit hangman is working perfectly">
+    <list default="true" id="25de3172-e430-45a0-9e0a-61e1ad70ce0d" name="Changes" comment="6.commit visual hotfix">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Graphics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +73,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager">
     <configuration name="GuessTheWord" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GuessTheWord" />
       <module name="Hangman" />
@@ -116,7 +118,8 @@
       <workItem from="1685523358551" duration="255000" />
       <workItem from="1685523621958" duration="20462000" />
       <workItem from="1685619267057" duration="82000" />
-      <workItem from="1685634883448" duration="4137000" />
+      <workItem from="1685634883448" duration="5502000" />
+      <workItem from="1685693728490" duration="6494000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1685452087066</created>
@@ -195,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685638966620</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="6.commit visual hotfix">
+      <created>1685639060374</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1685639060374</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,7 +228,8 @@
     <MESSAGE value="3.commit need to fix graphics (if i write right letter it counts as wrong letter)" />
     <MESSAGE value="4.commit guess the word is working perfectly need hotfix bcs of whitespaces" />
     <MESSAGE value="5.commit hangman is working perfectly" />
-    <option name="LAST_COMMIT_MESSAGE" value="5.commit hangman is working perfectly" />
+    <MESSAGE value="6.commit visual hotfix" />
+    <option name="LAST_COMMIT_MESSAGE" value="6.commit visual hotfix" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
