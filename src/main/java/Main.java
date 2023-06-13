@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {             //todo principy oop
 
@@ -19,6 +19,8 @@ public class Main {             //todo principy oop
             }
         }
         String guessedWord = guessedWordBuilder.toString();
+        /*Input input = new Input();
+        input.inputGuessingWord();*/
 
         /*-----------GUESSING THE LETTER----------------------*/
 
@@ -62,23 +64,13 @@ public class Main {             //todo principy oop
             Graphics graphics = new Graphics();
             graphics.drawHangman();
 
-
             if (guessedWord.equals(secretWord)) {
                 System.out.println("You won you lucker.");
-                System.out.println("The word was " + guessedWord);
+                System.out.println("The word was " + guessedWord+ ".");
                 break;
             }
         }
-        if (Graphics.attempts == 0) {
-            System.out.println("You lost haha the word was so easy take a look it is " + secretWord);
-            System.out.println(" -------");
-            System.out.println("  |    |");
-            System.out.println("  o    |");
-            System.out.println(" /|\\   |");
-            System.out.println(" / \\   |");
-            System.out.println(" ______|");
-            System.out.println("|______|");
+        System.out.println("You lost haha the word was so easy take a look it is " + secretWord);
             input.close();
         }
     }
-}
