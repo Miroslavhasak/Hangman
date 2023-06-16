@@ -1,9 +1,8 @@
 public class GuessingOneByOne {
-    Main main = new Main();
-    public void guessingOneByOne() {
-        for (int i = 0; i < main.secretWord.length(); i++) {
-            if (main.secretWord.charAt(i) == main.guess) {
-                main.guessedWord = main.guessedWord.substring(0, i) + main.guess + main.guessedWord.substring(i + 1);
+    public void guessingOneByOne(String guessedWord,String secretWord,char guess) {
+        for (int i = 0; i < secretWord.length(); i++) {
+            if (secretWord.charAt(i) == guess) {
+                guessedWord = guessedWord.substring(0, i) + guess + guessedWord.substring(i + 1);
             }
         }
     }
